@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ImageForge — Pricing</title>
+<style>
+  :root {
+    --bg: #0b0c10;
+    --panel: #161821;
+    --text: #f2f3f7;
+    --text-dim: #9a9db0;
+    --accent: #7c5cff;
+    --accent-2: #29d3c2;
+    --radius: 16px;
+    --shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.6);
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    background: radial-gradient(1200px 600px at 50% -10%, rgba(124, 92, 255, 0.2), transparent 60%),
+      radial-gradient(900px 500px at 90% 10%, rgba(41, 211, 194, 0.12), transparent 55%), var(--bg);
+    min-height: 100vh;
+  }
+  .wrap { max-width: 480px; margin: 0 auto; padding: 0 24px; }
+  .top { display: flex; align-items: center; justify-content: center; padding: 28px 0; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; letter-spacing: -0.02em; }
+  .brand-mark {
+    width: 28px; height: 28px; border-radius: 8px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    display: inline-flex; align-items: center; justify-content: center; font-size: 15px;
+  }
+  .hero { text-align: center; padding: 24px 0 40px; }
+  .hero h1 { font-size: clamp(28px, 6vw, 38px); line-height: 1.15; letter-spacing: -0.03em; margin: 0 0 14px; font-weight: 800; }
+  .hero h1 span {
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .sub { color: var(--text-dim); font-size: 16px; line-height: 1.6; margin: 0; }
+  .plan {
+    background: linear-gradient(180deg, rgba(124, 92, 255, 0.08), var(--panel) 45%);
+    border: 1px solid var(--accent); border-radius: var(--radius); padding: 32px 30px;
+    box-shadow: var(--shadow), 0 0 0 1px rgba(124, 92, 255, 0.4) inset; margin-bottom: 24px;
+  }
+  .plan-name { font-size: 15px; font-weight: 700; color: var(--accent-2); text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 10px; }
+  .price-row { display: flex; align-items: baseline; gap: 6px; margin-bottom: 22px; }
+  .price { font-size: 48px; font-weight: 800; letter-spacing: -0.02em; }
+  .price-period { color: var(--text-dim); font-size: 15px; }
+  .cta {
+    display: block; text-align: center; padding: 14px 18px; border-radius: 10px; font-weight: 700; font-size: 15px;
+    border: none; background: linear-gradient(135deg, var(--accent), #9b7bff); color: #fff;
+    box-shadow: 0 8px 24px -8px rgba(124, 92, 255, 0.6); cursor: pointer; transition: filter 0.15s ease;
+    margin-bottom: 26px; width: 100%; font-family: inherit;
+  }
+  .cta:hover { filter: brightness(1.08); }
+  .cta:disabled { opacity: 0.7; cursor: default; }
+  .features { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+  .features li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #cfd1de; line-height: 1.45; }
+  .features li svg { flex: none; margin-top: 2px; color: var(--accent-2); }
+  footer { text-align: center; color: var(--text-dim); font-size: 13px; padding: 36px 0 48px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="top">
+      <div class="brand"><span class="brand-mark">🖼️</span> ImageForge</div>
+    </nav>
+
+    <header class="hero">
+      <h1>Simple pricing for<br /><span>building images at scale</span></h1>
+      <p class="sub">One plan, everything included. Cancel anytime.</p>
+    </header>
+
+    <main>
+      <section class="plan">
+        <div class="plan-name">Pro subscription</div>
+        <div class="price-row">
+          <span class="price">$29</span>
+          <span class="price-period">/ month</span>
+        </div>
+        <button class="cta" id="buyBtn" type="button">Buy Now</button>
+        <ul class="features">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>5,000 image builds / month</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>10 concurrent builds</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>Private registries</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>Build caching &amp; layer reuse</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>Priority email support</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>© 2026 ImageForge. All rights reserved.</footer>
+  </div>
+
+  <script>
+    const btn = document.getElementById("buyBtn");
+    btn.addEventListener("click", async () => {
+      btn.disabled = true;
+      const original = btn.textContent;
+      btn.textContent = "Loading...";
+      try {
+        const response = await fetch("/api/checkout", { method: "POST" });
+        const data = await response.json();
+        if (!response.ok || !data.checkoutUrl) {
+          throw new Error(data.error || "Checkout URL was not returned");
+        }
+        window.location.href = data.checkoutUrl;
+      } catch (error) {
+        console.error("Checkout error:", error);
+        alert("Failed to start checkout. Please try again.");
+        btn.disabled = false;
+        btn.textContent = original;
+      }
+    });
+  </script>
+</body>
+</html>
